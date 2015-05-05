@@ -1,0 +1,8 @@
+{
+  "name": "nodejs-storage-timeline-client",
+  "version": "0.0.1",
+  "main": "./main.js",
+  "dependencies": {
+    "request": "~2.53.0"
+   }
+}
