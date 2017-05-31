@@ -1,6 +1,6 @@
 var StorageClass = require('./storage');
 var SchemaClass = require('./schema');
-var TimeLineClass = require('./timeLine');
+var TimeLineClass = require('./timeline');
 module.exports = {
     _uri: undefined,
     setUri: function (value) {
