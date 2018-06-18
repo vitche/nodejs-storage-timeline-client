@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "main": "./main.js",
   "dependencies": {
+    "browser-request": "^0.3.3",
+    "nodeunit": "^0.11.2",
     "request": "~2.53.0"
-   }
+  }
 }
