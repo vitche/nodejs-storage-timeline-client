@@ -16,11 +16,13 @@ module.exports = {
 			callback(body);
 		};
 		if ('POST' == method) {
-			request.post(uri, {
+			request.post({
+				uri: uri,
 				form: arguments
 			}, handler);
 		} else if ('GET' == method) {
-			request.get(uri, {
+			request.get({
+				uri: uri,
 				qs: arguments
 			}, handler);
 		}
