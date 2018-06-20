@@ -9,6 +9,14 @@ var Timeline = function (uri) {
             value: value
         }, callback);
     };
+	this.addNumberForTime = function (schemaName, timeLineName, time, value, callback) {
+		this.prototype.execute('POST', 'timeline', 'add/number', {
+			schema: schemaName,
+			timeLine: timeLineName,
+			time: time,
+			value: value
+		}, callback);
+	};
     this.addString = function (schemaName, timeLineName, value, callback) {
         this.prototype.execute('POST', 'timeline', 'add/string', {
             schema: schemaName,
@@ -16,6 +24,14 @@ var Timeline = function (uri) {
             value: value
         }, callback);
     };
+	this.addStringForTime = function (schemaName, timeLineName, time, value, callback) {
+		this.prototype.execute('POST', 'timeline', 'add/string', {
+			schema: schemaName,
+			timeLine: timeLineName,
+			time: time,
+			value: value
+		}, callback);
+	};
     this.allNumbers = function (schemaName, timeLineName, callback) {
         this.prototype.execute('GET', 'timeline', 'all/numbers', {
             schema: schemaName,
