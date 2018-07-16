@@ -9,7 +9,7 @@ module.exports = {
 	initialize: function (uri) {
 		this._uri = uri;
 	},
-	execute: function (method, entityName, methodName, arguments, callback) {
+	execute: function (method, entityName, methodName, parameters, callback) {
 		var uri = this._uri + '/' + entityName + '/' + methodName;
 		var handler = function (error, response, body) {
 			body = JSON.parse(body);
@@ -18,12 +18,12 @@ module.exports = {
 		if ('POST' == method) {
 			request.post({
 				uri: uri,
-				form: arguments
+				form: parameters
 			}, handler);
 		} else if ('GET' == method) {
 			request.get({
 				uri: uri,
-				qs: arguments
+				qs: parameters
 			}, handler);
 		}
 	}
