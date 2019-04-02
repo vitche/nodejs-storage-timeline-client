@@ -12,6 +12,10 @@ module.exports = {
 	execute: function (method, entityName, methodName, parameters, callback) {
 		var uri = this._uri + '/' + entityName + '/' + methodName;
 		var handler = function (error, response, body) {
+			if ('' === body) {
+				callback();
+				return;
+			}
 			body = JSON.parse(body);
 			callback(body);
 		};
